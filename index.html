@@ -1,57 +1,172 @@
-<!DOCTYPE html>
 <html>
 
+
+  
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Calentamiento Global</title>
+  <title>Superheroes</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  
+  <link rel="icon" type="image/x-icon" href="zeb.jpg">
+  
 </head>
+<style>
+@-webkit-keyframes fade-in-up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-<body>
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+.video-wrap {
+  text-align: center;
+}
+
+.video iframe {
+  max-width: 100%;
+  max-height: 100%;
+}
+.video.stuck {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  width: 260px;
+  height: 145px;
+  z-index:99999;
+  -webkit-animation: fade-in-up .25s ease forwards;
+          animation: fade-in-up .25s ease forwards;
+}
+
+</style>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"> </script>
+<script>
+//<![CDATA[
+var $window = $(window);
+var $videoWrap = $('.video-wrap');
+var $video = $('.video');
+var videoHeight = $video.outerHeight();
+
+$window.on('scroll',  function() {
+  var windowScrollTop = $window.scrollTop();
+  var videoBottom = videoHeight + $videoWrap.offset().top;
+  
+  if (windowScrollTop > videoBottom) {
+    $videoWrap.height(videoHeight);
+    $video.addClass('stuck');
+  } else {
+    $videoWrap.height('auto');
+    $video.removeClass('stuck');
+  }
+});
+//]]>
+</script>
+
+<div class="topnav">
+  <a href="index.html">
+    <img style="float: left; width:20px; height:20px;" src="lion.jpg" />
+  </a>
 
 
-<div class="Calentamiento Global">
-<h1>Calentamiento Global</h1>
-<h3>Janelisse M. Escobar Báez</h3>
+
+  
+  
+  <a href="https://HTMLPROJECTWednesday.joshholzhauser.repl.co/about.html" style="float: right;">About Me</a>
+
+  <a href="https://HTMLPROJECTWednesday.joshholzhauser.repl.co/superheroes/spiderman.html" style="float: right;">Another
+    Page </a>
+  <a href="https://htmlprojectwednesday.joshholzhauser.repl.co/superheroes/superman.html" style="float: right;">Title
+    Page</a>
+  <a href="https://HTMLPROJECTWednesday.joshholzhauser.repl.co/template.html" style="float: right;">Home</a>
 </div>
-<!-- Tal vez mueva esto hacia abajo debajo del HEADER, ya que estos son enlaces a diferentes áreas de la misma página.-->
-  <nav>
-  <!-- Creo que es posible que deba espaciar estos enlaces-->
-<a href=#1>¿Qué es el Calentamiento Global? </a>
-  <br>
-<a href=#2> ¿Qué podemos hacer para que el Calentamiento Global no nos afecte? </a>
-  <br>
-<a href=#3> ¿Cómo empeoramos el mismo? </a>
-  <br>
-<a href=#4> ¿Cómo afecta el Calentamiento Global a nuestro medio ambiente? </a>
-  <br>
-<a href=#5> ¿Cuál es tu opinión? Qué ustedes harían en este caso? </a>
-  <br>
-</nav>
-<hr>
-<div class="contenido">
-<a id="1"> <h2> ¿Qué es el Calentamiento Global? </h2>
-  <img src="https://cdn.bioguia.com/embed/a58fa7f2b536355d3e9ca8018d3f8a5b44db27a1559568925/calentamiento-global-que-es-afecta-hacer-revertirlo.jpg?imagick=1&size=1000"
-  <p> <strong>El calentamiento global se refiere al aumento gradual de la temperatura de la tierra (incluyendo la atmósfera y los océanos). Esto, como resultado del incremento de gases de efectos invernadero que se caracterizan por retener el calor.</strong></p>
 
-<a id="2"> <h2> ¿Qué podemos hacer para que el Calentamiento Global no nos afecte? </h2>
-  <img src="https://th.bing.com/th/id/R.8f396e6a97811b63ac24b65e890a0126?rik=O6inj3CMusKaqA&riu=http%3a%2f%2fdrfeliz.com%2fimages%2f2016%2f07%2fcalentamiento-global.jpg&ehk=5K73DHJo%2f8G4H%2fbCd%2f%2bhgDTLCOWb2vCeexA3lzVlu3M%3d&risl=&pid=ImgRaw&r="
-  <p> <strong>Las pruebas de que los seres humanos estamos provocando el calentamiento global son concluyentes, pero la cuestión de qué se puede hacer al respecto sigue creando polémica. La economía, la sociología y la política son factores importantes a tener en cuenta a la hora de planificar el futuro.</strong></p>
-  <ol>
-  <li>Utilizar el transporte público. Caminar o andar en bicicleta o usar el transporte público, en lugar del carro reducirá las emisiones de carbono.</li>
-  <li>Ahorra energía. Pon la ropa húmeda al sol en lugar de utilizar secadoras y trata de ahorrar al máximo electricidad.</li>
-  <li>Trata de consumir menos carne. La producción de carne roja lleva a un número significativamente mayor de emisiones de gases de efecto invernadero que la de pollo, frutas, verduras.</li>
-    <li>Reducir y reutilizar... incluso el agua. Nos han hablado de los beneficios del reciclaje una y otra vez a lo largo de nuestras vidas.</li>
+<!-- header for superheroes -->
+<p style="font-size:30px; text-align:center; margin-bottom:0px;"> Superheroes</p>
+<p style="font-size:10px; text-align:center; margin-top:0px; margin-bottom:100px;"> All about your favorite superhero
+  and how to defeat them</p>
 
-<a id="3"> <h2> ¿Cómo empeoramos el mismo? </h2>
- <p> <strong>No nos damos cuenta, y no nos percatamos de que con pequeñas cosas estamos ayudando a empeorar el calentamiento global, por el simple hecho de tirar un papel al suelo, suplantar árboles plantados por cualquier otra planta o por construir casas, al no reciclar, etc...</strong></p>
+<a href="#gotohulk">
+  GO TO THE HULK
+</a>
 
-<a id="4"> <h2> ¿Cómo afecta el Calentamiento Global en nuestro medio ambiente? </h2>
- <p> <strong>Según estudios de la NASA y otras agencias, las señales más contundentes de que el calentamiento global y la contaminación están afectando nuestro ambiente comienzan con el aumento de la temperatura de la tierra en un promedio de .9 grados Celsius; esto sucede por la cantidad de emisiones de dióxido de carbono hacia la atmósfera.</strong></p>
+<a href="#hawkeyepicture">
+  Go to the hawkeye picture
+</a>
 
-<a id="5"> <h2> ¿Cuál es tu opinión? Qué ustedes harían en este caso? </h2>
+  <div>
+
+<div>
+  <p> This is text in a div</p>
+  </div>
+
+
     
-</body>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1EtiyAK6SXzo67?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+    
+    
+<!-- spiderman -->
+<a href="superheroes/spiderman.html">
+
+  <img src="https://cdn1-www.superherohype.com/assets/uploads/2020/07/Spider-Man-Origins-and-Evolutions-featured.jpg">
+
+</a>
+
+      <!-- The YouTube video -->
+    <div class="video-wrap">
+    <div class="video">
+      <iframe width="600" height="340" src="https://www.youtube.com/embed/dPyZ5Noum9g" frameborder="0" gesture="media" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- superman -->
+<a href="https://HTMLPROJECTWednesday.joshholzhauser.repl.co/superheroes/superman.html">
+
+  <img src="https://tvseriesfinale.com/wp-content/uploads/2016/09/spg202a_0169b.jpg">
+</a>
+<br>
+<!-- flash -->
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGb7Q1Dp9-f9L_Zy9glItPEbZkzP7knzYytA&usqp=CAU">
+<br>
+
+<!-- iron man -->
+<img id="topofpage"
+  src="https://static.wikia.nocookie.net/marveldatabase/images/0/0a/Iron_Man_Vol_6_1_Brooks_Variant_Textless.jpg">
+<br>
+
+<!-- hulk -->
+<img id="gotohulk"
+  src="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/02/Hulk-Marvel-Comics-Destroy-Earth.jpg">
+<br>
+<!-- black panther -->
+<img
+  src="https://cdn.vox-cdn.com/thumbor/wBmruOacepVJ2QMLF4YELZwuC5A=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/10225637/black_panther.jpg">
+
+<br>
+<!-- hawkeye -->
+<img id="hawkeyepicture" src="https://upload.wikimedia.org/wikipedia/en/9/99/Hawkeye_%28Clinton_Barton%29.png">
+<br>
+<!-- wonderwoman -->
+<img
+  src="https://www.dccomics.com/sites/default/files/GalleryComics_2019121825__0003_WW_Cv83_5df854f9d89f04.69140774.jpg">
+<br>
+  </div>
+
+ <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1EtiyAK6SXzo67?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
 </html>
