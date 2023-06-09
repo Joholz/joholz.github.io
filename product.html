@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- if you want to change the font you can update the href link here to your own font link-->
+<link href="https://fonts.googleapis.com/css2?family=&family=Varela+Round&display=swap" rel="stylesheet">
+  <title>Organization Page</title>
+  <style>
+    /* CSS for the horizontal navigation */
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    ul.navbar li {
+      float: left;
+    }
+    
+    ul.navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    ul.navbar li a:hover {
+      background-color: #111;
+    }
+    
+    /* CSS for the header title */
+    h1 {
+      text-align: center;
+    }
+    
+    /* CSS for the sections */
+    section {
+      padding: 20px;
+    }
+    
+    /* CSS for the images */
+    .image-container {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .image-container img {
+      width: 50%;
+      max-width: 400px;
+      height: auto;
+      margin: 10px;
+    }
+    
+    /* CSS for the footer */
+    footer {
+      background-color: #f9f9f9;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+   <!-- if you want to change the font make sure to change the font family here AND update the <link> href with your font link -->
+<body style="font-family:'Varela Round'">
+  <ul class="navbar">
+    <li><a href="#">Home</a></li>
+    <li><a href="product.html">Organization</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  
+  <h1>Organization Header Title</h1>
+  
+  <section>
+    <h2>About the Organization</h2>
+    <p>This is a small section about the product/Organization.</p>
+  </section>
+  
+  <section>
+    <h2>Images</h2>
+    <div class="image-container">
+      <img src="https://placehold.co/600x400" alt="Image 1">
+      <img src="https://placehold.co/600x400" alt="Image 2">
+    </div>
+  </section>
+  
+  <section>
+    <h2>Social Problem</h2>
+    <p>This is a small section about the social problem.</p>
+  </section>
+  
+  <footer>
+    <a href="#">Organization</a> | <a href="#">About</a> | <a href="#">Contact</a>
+  </footer>
+</body>
+</html>
